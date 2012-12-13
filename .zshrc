@@ -37,6 +37,6 @@ plugins=(git autojump brew bundler capistrano coffee cp encode64 forklift gem gi
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
