@@ -9,7 +9,7 @@ Dir.foreach(directory) do |item|
 	begin
 		File.symlink(File.expand_path(item), File.expand_path('~/' + item))
 	rescue Errno::EEXIST
-		FileUtils.rm File.expand_path('~/' + item)
+		FileUtils.mv File.expand_path('~/' + item), File.expand_path('~/' + item + '.backup')
 		File.symlink(File.expand_path(item), File.expand_path('~/' + item))
 	end
 end
