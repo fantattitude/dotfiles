@@ -7,6 +7,7 @@ call vundle#rc()
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
+set pastetoggle=<F2>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
