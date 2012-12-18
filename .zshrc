@@ -40,3 +40,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+compctl -g '~/.teamocil/*(:t:r)' teamocil
