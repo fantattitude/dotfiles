@@ -42,3 +42,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
