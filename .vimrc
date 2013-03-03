@@ -6,6 +6,7 @@ call vundle#rc()
 
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+highlight clear SignColumn	" Lié à GitGutter <3
 
 set pastetoggle=<F2>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
@@ -30,6 +31,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'airblade/vim-gitgutter.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
