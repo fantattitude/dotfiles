@@ -6,6 +6,7 @@ call vundle#rc()
 
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
+set cursorline
 highlight clear SignColumn	" Lié à GitGutter <3
 
 set pastetoggle=<F2>
