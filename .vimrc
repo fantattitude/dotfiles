@@ -8,6 +8,8 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set cursorline
 highlight clear SignColumn	" Lié à GitGutter <3
+set tabstop=4
+set shiftwidth=4
 
 set pastetoggle=<F2>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
