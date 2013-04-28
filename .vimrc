@@ -4,6 +4,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+set t_Co=256
+let NERDTreeMinimalUI = 1
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set cursorline
@@ -25,6 +27,8 @@ set noswapfile
 
 set nu
 syntax on
+set background=dark
+" colorscheme chlordane
 
 Bundle 'gmarik/vundle'
 " original repos on github
@@ -35,8 +39,15 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'airblade/vim-gitgutter.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'sickill/vim-monokai'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'guicolorscheme.vim'
 
 filetype plugin indent on     " required!
+
+autocmd vimenter * if !argc() | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <C-n> :NERDTreeToggle<CR>

@@ -37,7 +37,7 @@ plugins=(git autojump brew bundler capistrano coffee cp encode64 forklift gem gi
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -46,3 +46,9 @@ compctl -g '~/.teamocil/*(:t:r)' teamocil
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+alias -g ...=	'../..'
+alias -g ....=	'../../..'
+alias -g .....=	'../../../..'
+
+set t_Co=256
