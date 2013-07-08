@@ -52,3 +52,5 @@ alias -g ....=	'../../..'
 alias -g .....=	'../../../..'
 
 set t_Co=256
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

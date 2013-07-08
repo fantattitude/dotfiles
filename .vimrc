@@ -6,12 +6,15 @@ call vundle#rc()
 
 set t_Co=256
 let NERDTreeMinimalUI = 1
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts=0
 set laststatus=2
 set cursorline
 highlight clear SignColumn	" Lié à GitGutter <3
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set noexpandtab
+
 
 set pastetoggle=<F2>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
@@ -28,25 +31,27 @@ set noswapfile
 set nu
 syntax on
 set background=dark
-" colorscheme chlordane
 
 Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-bundler.git'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter.git'
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'sickill/vim-monokai'
 " vim-scripts repos
 Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'guicolorscheme.vim'
 
 filetype plugin indent on     " required!
+
+autocmd User Rails set tabstop=2
+autocmd User Rails set shiftwidth=2
+autocmd User Rails set softtabstop=2
+autocmd User Rails set expandtab
 
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
