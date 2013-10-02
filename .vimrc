@@ -6,7 +6,8 @@ call vundle#rc()
 
 set t_Co=256
 let NERDTreeMinimalUI = 1
-let g:airline_powerline_fonts=0
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 set cursorline
 highlight clear SignColumn	" Lié à GitGutter <3
