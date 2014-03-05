@@ -41,7 +41,6 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-bundler.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'airblade/vim-gitgutter.git'
 Bundle 'scrooloose/nerdtree.git'
 " vim-scripts repos

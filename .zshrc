@@ -53,4 +53,6 @@ alias -g .....=	'../../../..'
 
 set t_Co=256
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Les tokens d'API pour TestFlight (Ici pour la team PokéCenter)
+export TESTFLIGHT_API_TOKEN="amfupgUJWrljEYUTkZjDsED28ASTrXaM7e8PEWq2Gc4"
+export TESTFLIGHT_TEAM_TOKEN="5c308869ffd0b811f140ee76926d01f3_MzM4MzgwMjAxNC0wMi0xMyAxNzo1MTozMC4wNjIxMzQ"
