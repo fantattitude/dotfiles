@@ -40,6 +40,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 compctl -g '~/.teamocil/*(:t:r)' teamocil
 
@@ -56,3 +57,5 @@ set t_Co=256
 # Les tokens d'API pour TestFlight (Ici pour la team PokéCenter)
 export TESTFLIGHT_API_TOKEN="amfupgUJWrljEYUTkZjDsED28ASTrXaM7e8PEWq2Gc4"
 export TESTFLIGHT_TEAM_TOKEN="5c308869ffd0b811f140ee76926d01f3_MzM4MzgwMjAxNC0wMi0xMyAxNzo1MTozMC4wNjIxMzQ"
+
+function gi() { curl http://www.gitignore.io/api/$@ ;}
