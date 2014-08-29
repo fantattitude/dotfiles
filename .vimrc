@@ -1,8 +1,26 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+
+Plugin 'gmarik/vundle.vim'
+" original repos on github
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-bundler.git'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter.git'
+Plugin 'scrooloose/nerdtree.git'
+" vim-scripts repos
+Plugin 'L9'
+
+call vundle#end()
+filetype plugin indent on     " required!
+
 
 set t_Co=256
 let NERDTreeMinimalUI = 1
@@ -15,7 +33,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
-
 
 set pastetoggle=<F2>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*
@@ -33,20 +50,6 @@ set nu
 syntax on
 set background=dark
 
-Bundle 'gmarik/vundle'
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-bundler.git'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter.git'
-Bundle 'scrooloose/nerdtree.git'
-" vim-scripts repos
-Bundle 'L9'
-
-filetype plugin indent on     " required!
 
 autocmd User Rails set tabstop=2
 autocmd User Rails set shiftwidth=2

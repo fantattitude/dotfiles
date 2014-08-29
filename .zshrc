@@ -59,3 +59,9 @@ export TESTFLIGHT_API_TOKEN="amfupgUJWrljEYUTkZjDsED28ASTrXaM7e8PEWq2Gc4"
 export TESTFLIGHT_TEAM_TOKEN="5c308869ffd0b811f140ee76926d01f3_MzM4MzgwMjAxNC0wMi0xMyAxNzo1MTozMC4wNjIxMzQ"
 
 function gi() { curl http://www.gitignore.io/api/$@ ;}
+
+if [[ -d /usr/local/share/zsh-completions ]]; then
+	fpath=($fpath /usr/local/share/zsh-completions)
+fi
+
+source $ZSH/oh-my-zsh.sh
