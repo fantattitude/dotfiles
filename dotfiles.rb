@@ -2,14 +2,17 @@
 
 require 'fileutils'
 
-directory = File.expand_path(File.dirname(__FILE__))
+subdir = 'symlinks/'
+
+directory = File.expand_path(File.dirname(__FILE__) + '/' + subdir)
 
 Dir.foreach(directory) do |item|
-	next if item == '.' or item == '..' or item == 'dotfiles.rb' or item == 'README.md' or item == '.git'
+	next if item == '.' or item == '..'
 	begin
-		File.symlink(File.expand_path(item), File.expand_path('~/' + item))
+		File.symlink(File.expand_path(subdir + item), File.expand_path('~/' + item))
 	rescue Errno::EEXIST
+		puts 'rescue'
 		FileUtils.mv File.expand_path('~/' + item), File.expand_path('~/' + item + '.backup')
-		File.symlink(File.expand_path(item), File.expand_path('~/' + item))
+		File.symlink(File.expand_path(subdir + item), File.expand_path('~/' + item))
 	end
 end

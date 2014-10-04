@@ -4,7 +4,6 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-
 Plugin 'gmarik/vundle.vim'
 " original repos on github
 Plugin 'tpope/vim-fugitive'
@@ -15,17 +14,19 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter.git'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'altercation/vim-colors-solarized.git'
 " vim-scripts repos
 Plugin 'L9'
 
 call vundle#end()
 filetype plugin indent on     " required!
 
-
 set t_Co=256
 let NERDTreeMinimalUI = 1
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme             = 'powerlineish'
+" vim-powerline symbols
 set laststatus=2
 set cursorline
 highlight clear SignColumn	" Lié à GitGutter <3
@@ -49,6 +50,11 @@ set noswapfile
 set nu
 syntax on
 set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+colorscheme solarized
 
 
 autocmd User Rails set tabstop=2
