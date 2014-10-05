@@ -6,8 +6,9 @@ plugins=(git autojump brew rbenv)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
