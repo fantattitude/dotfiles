@@ -1,0 +1,13 @@
+[submodule "oh-my-zsh"]
+	path = symlinks/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+
+[submodule "vundle"]
+	path = symlinks/.vim/bundle/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git
+
+[submodule "powerline"]
+	path = symlinks/.powerline
+	url = https://github.com/Lokaltog/powerline.git
+
+
