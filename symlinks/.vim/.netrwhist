@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/fantattitude/.tmux/bundle/powerline'
 let g:netrw_dirhist_2='/Users/fantattitude/Documents/Developpement/Git/BeloteScore/BeloteScore.xcworkspace/BeloteScore.xcodeproj'
 let g:netrw_dirhist_3='/Users/fantattitude/.gem'
+let g:netrw_dirhist_4='/Users/fantattitude/.rbenv'
